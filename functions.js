@@ -18,22 +18,33 @@
 
 
 function dniLetter(dni){
+
 var lockup = 'TRWAGMYFPDXBNJZSQVHLCKE';
-	var arr = lockup.split("");
-	var num ;
-	var result = ''
-	var mod = (dni % 23);
-	
-	for ( num = 0; num < arr.length; num += 1){
+var arr = lockup.split("");
+var num ;
+var result = ''
+var mod = (dni % 23);
+var stringDni = dni.toString()
+
+	if (stringDni.match(/[a-z]/i)) {
+    result = 'Invalid parameter'
+	}
+
+	else if (dni < 0 ) {
+		
+		result = "Invalid parameter";
+	}
+	 
+	 else {
+		for ( num = 0; num < arr.length; num += 1){
 		
 		if (num == mod){
 			result = arr[num];
+		}		
 		}
-		
 	}
-	return result
+		return result;
 }
-
 
 console.log( dniLetter( 12345678 ) === 'Z');
 console.log( dniLetter( 34667892 ) === 'S');
@@ -49,12 +60,12 @@ console.log( dniLetter( 92234488 ) === 'A');
 // Improve the exercise above to be able to perform this new functionality
 // Of course it has to keep working as usual with right inputs.
 
-/*
+
 
 console.log( dniLetter( -1 ) === 'Invalid parameter');
 console.log( dniLetter( "A1234567" ) === 'Invalid parameter');
 
-*/
+
 
 
 //EXERCISE 3
