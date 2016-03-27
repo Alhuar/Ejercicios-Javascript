@@ -14,7 +14,7 @@
 // You can use 'result' variable to store the resulting letter.
 // If your code works, the last three equalities will be "true"
 
-
+/*
 
 
 function dniLetter(dni){
@@ -54,15 +54,15 @@ console.log( dniLetter( 92234488 ) === 'A');
 
 //EXERCISE 2
 //
-// Uncomment the exercise code deleting /* and */ chars
+// Uncomment the exercise code deleting /* and */ //chars
 // Open the console and reload the index page to see the result of the code.
 // Improve the exercise above to be able to perform this new functionality
 // Of course it has to keep working as usual with right inputs.
 
 
 
-console.log( dniLetter( -1 ) === 'Invalid parameter');
-console.log( dniLetter( "A1234567" ) === 'Invalid parameter');
+//console.log( dniLetter( -1 ) === 'Invalid parameter');
+//console.log( dniLetter( "A1234567" ) === 'Invalid parameter');
 
 
 
@@ -75,17 +75,24 @@ console.log( dniLetter( "A1234567" ) === 'Invalid parameter');
 // Open the console and reload the index page to see the result of the code.
 // Write a function that takes an array of words and returns the length of the longest one.
 
-/*
+
 
 function findLongestWord( array_words ){
 
+	array_words.sort(function (a,b){
+		return b.length - a.length
+	})
+	
+return array_words[0].length;
+
 }
 
-console.log( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"] ) ===6 );
+
+
+console.log( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"] )===6 );
 console.log( findLongestWord( ["Blanka", "Zangief", "Chun Li", "Guile"] ) === 7 );
 console.log( findLongestWord( ["Red", "Blue", "Green"] ) === 5 );
 
-*/
 
 //EXERCISE 4
 //
