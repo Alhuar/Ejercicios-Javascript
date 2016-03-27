@@ -52,7 +52,6 @@ console.log( dniLetter( 92234488 ) === 'A');
 
 
 
-
 //EXERCISE 2
 //
 // Uncomment the exercise code deleting /* and */ chars
@@ -64,6 +63,7 @@ console.log( dniLetter( 92234488 ) === 'A');
 
 console.log( dniLetter( -1 ) === 'Invalid parameter');
 console.log( dniLetter( "A1234567" ) === 'Invalid parameter');
+
 
 
 
