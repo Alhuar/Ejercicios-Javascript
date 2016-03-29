@@ -65,13 +65,13 @@ console.log( dniLetter( 92234488 ) === 'A');
 //console.log( dniLetter( "A1234567" ) === 'Invalid parameter');
 
 
-
+/*
 
 
 //EXERCISE 3
 //
-// Restore the comments marks (/* */) of the previous exercises. First two exercises have to be commented 
-// Uncomment the exercise code deleting /* and */ chars
+// Restore the comments marks 
+// Uncomment the exercise code deleting /* and 
 // Open the console and reload the index page to see the result of the code.
 // Write a function that takes an array of words and returns the length of the longest one.
 
@@ -96,13 +96,13 @@ console.log( findLongestWord( ["Red", "Blue", "Green"] ) === 5 );
 
 //EXERCISE 4
 //
-// Uncomment the exercise code deleting /* and */ chars
+// Uncomment the exercise code deleting /* and */ 
 // Now we are going to save the longest length of every array in a new array called array_lengths
 // Open the console and reload the index page to see the result of the code.
 // You have to complete the calculateAverage function (it is a few lines below), and it has
 // to return the average of every number in a array instead of the "Not implemented yet" message.
 
-
+/*
 
 var array_lengths = [];
 array_lengths.push( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"]) );
@@ -112,7 +112,7 @@ array_lengths.push( findLongestWord( ["Lunes", "Martes", "Miércoles", 'Jueves',
 array_lengths.push( findLongestWord( ["Perro", "Gato", "Delfín", "León"] ) );
 
 //<place to add more lines>, read next commented text and you will understand
-
+/*
 
 //console.log( "These are the longest lengths of each group: " + array_lengths );
 //console.log( calculateAverage( array_lengths ) === 6 && "The average of longest lengths is: " + calculateAverage( array_lengths ))
@@ -135,26 +135,30 @@ console.log("The average of longest lengths is: " + calculateAverage( array_leng
 // Now reload the page and see how changed the average.
 
 
-
+*/
 
 //EXERCISE 5
 //
 // Restore the comments marks (/* */) of the previous exercises.
 // Uncomment this exercise code deleting /* and */ chars
-// Now we are going to save the longest length of every array in a new array called array_lengths
 // Open the console and reload the index page to see the result of the code.
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. 
 // As a condition you must use the object freqCounter.
 // Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 
-/*
+
 
 function charFreq( string ) {
 	freqCounter = {};
-
+	for (num = 0; num < string.length; num += 1){
+		if (string[num] in freqCounter ){
+			freqCounter[string[num]] += 1}
+			else {(freqCounter[string[num]] = 1)}
+			
+		}
+		return freqCounter;
 	}
-	return freqCounter;
-}
+
 
 counter = charFreq("abbabcbdbabdbdbabababcbcbab");
 console.log( counter['a'] === 7);
@@ -170,7 +174,7 @@ console.log( counter['s'] === 1 );
 console.log( counter.d === 1 );
 console.log( counter['f'] === 1 );
 
-*/
+
 
 
 //BONUS EXERCISE
